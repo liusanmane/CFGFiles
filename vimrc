@@ -16,3 +16,22 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
+
+let s:system_type = SystemInfoGet()
+
+if system_type == 1
+    call MacBookConfig()
+endif
+
+
+function SystemInfoGet()
+    let system_type = system("uname -a | grep MacBook")
+    if system_type == ""
+        return 0
+    else
+        return 1
+    endif
+endfunction
+
+function MacBookConfig()
+endfunction
