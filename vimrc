@@ -17,11 +17,6 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 
-let s:system_type = SystemInfoGet()
-
-if system_type == 1
-    call MacBookConfig()
-endif
 
 
 function SystemInfoGet()
@@ -35,3 +30,10 @@ endfunction
 
 function MacBookConfig()
 endfunction
+
+let s:system_type = SystemInfoGet()
+
+if s:system_type == 1
+    call MacBookConfig()
+endif
+
