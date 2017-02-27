@@ -1,7 +1,7 @@
 "==================
 " COMMEN SET
 "==================
-
+"
 " File encoding set
 set fileencodings=utf-8,chinese,latin-1
 set termencoding=utf-8
