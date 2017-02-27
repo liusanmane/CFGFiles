@@ -57,11 +57,14 @@ set nofoldenable "dont fold at start
 "=====================
 if has('win32')
     language messages zh_CN.utf-8
+    set nobackup
 elseif has('unix')
 
 elseif has('mac')
-
+    set nobackup
 endif
+
+
 
 function! SystemInfoGet()
     let system_type = system("uname -a | grep MacBook")
