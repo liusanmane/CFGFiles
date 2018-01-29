@@ -55,32 +55,21 @@ set nofoldenable "dont fold at start
 "=====================
 " CONFIG WITH DIFF OS
 "=====================
+"Modified by Lius on 1.29,2018.
 if has('win32')
     language messages zh_CN.utf-8
     set nobackup
 elseif has('unix')
+    if system("uname -a | grep MacBook") == ""
 
+    else
+        call MacBookConfig()
+    endif
 elseif has('mac')
     set nobackup
 endif
 
 
-
-function! SystemInfoGet()
-    let system_type = system("uname -a | grep MacBook")
-    if system_type == ""
-        return 0
-    else
-        return 1
-    endif
-endfunction
-
 function! MacBookConfig()
 endfunction
-
-let s:system_type = SystemInfoGet()
-
-if s:system_type == 1
-    call MacBookConfig()
-endif
 
