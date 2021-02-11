@@ -5,5 +5,3 @@ Used by MacBook, minitx-PC, minitx-Fedora.
 
 ## TODO
 * systemed configure
-
-dsfdssdfds
